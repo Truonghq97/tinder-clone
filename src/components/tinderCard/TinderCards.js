@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import database from '../../firebase';
+import database from "../../firebase";
 
 import TinderCard from "react-tinder-card";
 
@@ -9,17 +9,16 @@ function TinderCards() {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-   const unsubcribe = database
-      .collection('people')
-      .onSnapshot(snapshot => (
-        setPeople(snapshot.docs.map(doc => doc.data())) 
-      ))
+    const unsubcribe = database
+      .collection("people")
+      .onSnapshot((snapshot) =>
+        setPeople(snapshot.docs.map((doc) => doc.data()))
+      );
 
-      return () => {
-        unsubcribe();
-      }
-;
-  }, [])
+    return () => {
+      unsubcribe();
+    };
+  }, []);
 
   return (
     <div>

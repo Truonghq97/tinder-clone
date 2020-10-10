@@ -1,6 +1,6 @@
 .header {
-  max-width: 70%;
-  margin: 0 auto;
+  /* max-width: 70%; */
+  /* margin: 0 auto; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,5 +13,9 @@
 }
 
 .header__icon {
+  padding: 20px;
+}
+
+.header__arrowBackIosIcon {
   padding: 20px;
 }
