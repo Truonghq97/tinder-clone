@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import TinderCards from "./components/tinderCard/TinderCards";
 import SwipeButtons from "./components/swipeButton/swipeButtons";
 import Chats from "./components/chats/Chats";
+import ChatScreen from "./components/chatScreen/ChatScreen";
 import "./App.css";
 
 function App() {
@@ -14,8 +15,7 @@ function App() {
         <Switch>
           <Route path="/chat/:person">
             <Header backButton="/chat" />
-            <Chats />
-            <h1>It works</h1>
+            <ChatScreen />
           </Route>
           <Route path="/chat">
             <Header backButton="/" />
